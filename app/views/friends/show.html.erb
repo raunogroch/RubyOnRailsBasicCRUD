@@ -1,0 +1,27 @@
+<% if notice %>
+  <div class="alert alert-success" role="alert">
+    <%= notice %>
+  </div>
+<% end %>
+
+<div class="row d-flex justify-content-center">
+  <div class="card col-4">
+    <div class="card-header text-center">
+      <h4><%= @friend.first_name %> <%= @friend.last_name %></h4>
+    </div>
+    <div class="card-body">
+      <div class="text-left">
+        <p class="card-text">Email: <%= @friend.email %></p>
+        <p class="card-text">Celular: <%= @friend.phone %></p>
+      </div>
+      <br><br>
+      <div class="text-center">
+        <%= link_to "Edit this friend", edit_friend_path(@friend), class: "btn btn-outline-primary" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :navigation do %>
+<%= link_to "Volver", friends_path, class: "btn btn-outline-secondary" %>
+<% end %>

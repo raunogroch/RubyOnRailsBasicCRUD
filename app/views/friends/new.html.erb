@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-between align-items-center">
+  <h1>Crear Amigo</h1>
+</div>
+
+
+<% content_for :navigation do %>
+  <%= link_to "Volver", friends_path, class: 'btn btn-outline-secondary' %>
+<% end %>
+
+<%= render "form", friend: @friend %>
+
+
